@@ -1,0 +1,25 @@
+{
+  "schema": "GraphQL/schema.graphql",
+  "documents": "GraphQL/**/*.graphql",
+  "extensions": {
+    "endpoints": {
+      "NexusGraphQLClient": {
+        "url": "https://api.nexusmods.com/v2/graphql"
+      }
+    },
+    "strawberryShake": {
+      "name": "NexusGraphQLClient",
+      "url": "https://api.nexusmods.com/v2/graphql",
+      "records": {
+        "inputs": false,
+        "entities": false
+      },
+      "transportProfiles": [
+        {
+          "default": "Http",
+          "subscription": "WebSocket"
+        }
+      ]
+    }
+  }
+}

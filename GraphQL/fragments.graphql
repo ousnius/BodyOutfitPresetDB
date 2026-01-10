@@ -1,0 +1,150 @@
+fragment User on User {
+    name
+    avatar
+    memberId
+    membershipRoles
+    roles
+}
+
+fragment PresignedUrl on PresignedUrl {
+    url
+    uuid
+}
+
+fragment Category on Category {
+    id
+    parentId
+    name
+    description
+    approved
+    discardedAt
+}
+
+fragment Mod on Mod {
+    uid
+    id
+    modId
+    name
+    createdAt
+    updatedAt
+    summary
+    description
+    status
+    author
+    uploader {
+        name
+        avatar
+        memberId
+    }
+    pictureUrl
+    modCategory {
+        name
+    }
+    adult
+    adultContent
+    version
+    downloads
+    endorsements
+    fileSize
+    game {
+        domainName
+        name
+        id
+    }
+    isBlockedFromEarningDp
+}
+
+fragment ModFile on ModFile {
+    name
+    modId
+    version
+    sizeInBytes
+    date
+    uid
+
+    mod {
+        ...Mod
+    }
+}
+
+fragment Collection on Collection {
+    id
+    slug
+    name
+    collectionStatus
+    summary
+    endorsements
+    totalDownloads
+    overallRating
+    overallRatingCount
+    recentRating
+    recentRatingCount
+
+    category {
+        ...Category
+    }
+
+    tileImage {
+        thumbnailUrl(size: small)
+    }
+
+    headerImage {
+        url
+    }
+
+    user {
+        ...User
+    }
+
+    game {
+        id
+        name
+        domainName
+    }
+}
+
+fragment CollectionRevision on CollectionRevision {
+    id
+    assetsSizeBytes
+    revisionNumber
+    adultContent
+    totalSize
+    overallRating
+    overallRatingCount
+    modCount
+    ...CollectionRevisionStatus
+
+    modFiles {
+        id
+        optional
+        gameId
+        fileId
+        file {
+            ...ModFile
+        }
+        updatePolicy
+        version
+    }
+
+    collectionChangelog {
+        ...CollectionRevisionChangelog
+    }
+
+    collection {
+        ...Collection
+    }
+}
+
+fragment CollectionRevisionChangelog on CollectionChangelog {
+    id
+    collectionRevisionId
+    revisionNumber
+    createdAt
+    updatedAt
+    description
+}
+
+fragment CollectionRevisionStatus on CollectionRevision {
+    status
+    revisionStatus
+}
