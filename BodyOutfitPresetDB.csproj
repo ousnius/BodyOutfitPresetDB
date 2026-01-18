@@ -12,10 +12,10 @@
 
   <ItemGroup>
     <PackageReference Include="LiteDB" Version="5.0.21" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.2" />
     <PackageReference Include="Pathoschild.FluentNexus" Version="1.0.5" />
     <PackageReference Include="SharpCompress" Version="0.44.0" />
-    <PackageReference Include="StrawberryShake.Server" Version="15.1.11" />
+    <PackageReference Include="StrawberryShake.Server" Version="15.1.12" />
   </ItemGroup>
 
 </Project>
