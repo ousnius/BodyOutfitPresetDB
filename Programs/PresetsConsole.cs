@@ -207,7 +207,7 @@ namespace BodyOutfitPresetDB.Programs
                 Console.WriteLine("1 = Skyrim LE");
                 Console.WriteLine("2 = Skyrim SE");
                 Console.WriteLine("3 = Fallout 4");
-                Console.WriteLine("any = all games");
+                Console.WriteLine("4 = all games");
 
                 GameId? gameId = null;
                 string exportPath = "presetlist.csv";
@@ -239,7 +239,7 @@ namespace BodyOutfitPresetDB.Programs
                 Console.WriteLine("1 = Skyrim LE");
                 Console.WriteLine("2 = Skyrim SE");
                 Console.WriteLine("3 = Fallout 4");
-                Console.WriteLine("any = all games");
+                Console.WriteLine("4 = all games");
 
                 GameId? gameId = null;
                 string downloadPath = "preset_archives";
@@ -284,7 +284,7 @@ namespace BodyOutfitPresetDB.Programs
                 Console.WriteLine("1 = Skyrim LE");
                 Console.WriteLine("2 = Skyrim SE");
                 Console.WriteLine("3 = Fallout 4");
-                Console.WriteLine("any = all games");
+                Console.WriteLine("4 = all games");
 
                 string extractPath = "presets";
 
